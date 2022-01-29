@@ -1,4 +1,182 @@
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;700&display=swap');
+
 body {
 	background-color: #383838;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.source {
+	margin: auto;
+	width: fit-content;
+	margin-top: 200px;
+	display: flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+
+
+	.paste-code {
+		width: 600px;
+		background-color: #272727;
+		border-radius: 10px;
+		min-height: 300px;
+		outline: none;
+		border: none;
+		color: white;
+		text-align: left;
+		padding: 20px;
+		resize: none;
+
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		transition: all 0.3s linear;
+
+		&.collapse {
+			min-height: 45px;
+			opacity: 0.6;
+		}
+	}
+
+	.adapt {
+		margin-left: 15px;
+		position: static;
+		display: inline-block;
+		width: 200px;
+		height: 43px;
+		padding: 0 30px;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border: 1px solid #181818;
+		border-radius: 5px;
+		background-color: #181818;
+		-webkit-transition: color .2s,background-color .2s;
+		transition: color .2s,background-color .2s;
+		font-family: 'Nhaasgrotesktxpro 75bd',sans-serif;
+		color: #fff;
+		font-size: 15px;
+		line-height: 39px;
+		font-style: normal;
+		text-align: center;
+		letter-spacing: 0;
+		text-decoration: none;
+		border: none;
+		font-weight: bold;
+
+
+
+		&:hover {
+			cursor: pointer;
+			background-color: rgb(255, 255, 255);
+			color: black;
+		}
+	}
+}
+
+.copy {
+	margin: 25px auto;
+	padding: 5px;
+	border-top: 1px solid #bdbdbd;
+	width: 400px;
+}
+
+.dist {
+	margin: auto;
+	width: fit-content;
+
+	display: flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+
+
+	.paste-code {
+		width: 600px;
+		background-color: #272727;
+		border-radius: 10px;
+		height: 45px;
+		outline: none;
+		border: none;
+		color: white;
+		text-align: left;
+		padding: 20px;
+		resize: none;
+		opacity: 0.6;
+
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		transition: all 0.3s linear;
+
+		&.expand {
+			height: 300px;
+			opacity: 1;
+		}
+	}	
+
+	.adapt {
+		margin-left: 15px;
+		position: static;
+		display: inline-block;
+		width: 200px;
+		height: 43px;
+		padding: 0 30px;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border: 1px solid #181818;
+		border-radius: 5px;
+		background-color: #181818;
+		-webkit-transition: color .2s,background-color .2s;
+		transition: color .2s,background-color .2s;
+		font-family: 'Nhaasgrotesktxpro 75bd',sans-serif;
+		color: #fff;
+		font-size: 15px;
+		line-height: 39px;
+		font-style: normal;
+		text-align: center;
+		letter-spacing: 0;
+		text-decoration: none;
+		border: none;
+		font-weight: bold;
+
+		&.dist {
+			opacity: 0;
+		}
+	}
 }

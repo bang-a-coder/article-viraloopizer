@@ -1,18 +1,36 @@
 import "./styles.scss";
 
 let transformBtn = document.querySelector('.adapt')
+let codeScr = document.querySelector('#input')
+let codeOut = document.querySelector('#output')
 
 function getClipboard(){
-	const text = document.querySelector('.paste-code').value
-
-	return text
+	return codeScr.value
 }
+
+function pasteOutput(html) {
+	codeOut.value = html
+
+	codeScr.classList.add('collapse')
+	codeOut.classList.add('expand')
+}
+
 
 function transform(){
 	let htmlOG = getClipboard()
 
+	pasteOutput(htmlOG)
 	return htmlOG
 }
+
+
+
+
+
+
+
+
+
 
 transformBtn.addEventListener('click', ()=>{
 	console.log('enter')
