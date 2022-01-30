@@ -21,15 +21,8 @@ module.exports = {
 		      "sass-loader",
 		      ],
 		},
-		{
-			test: /\.(png|svg|jpg|jpeg|gif)$/i,
-			type: 'asset/resource',
-		   },
-		{
-		test: /\.png$/, 
-		exclude: /node_modules/,
-		loader: 'file-loader?name=images/[name].[ext]'
-		}
+		
+
 	      ],
 	    },
       };

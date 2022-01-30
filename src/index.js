@@ -31,8 +31,6 @@ function transform(){
 	//delete new lines
 
 
-	//Remove descriptive headings
-
 
 	//make make images large & aligncenter
 	let images = workbench.querySelectorAll('img')
@@ -69,7 +67,7 @@ function transform(){
 		}
 	})
 
-	//remove bold from headings
+	//clear heading descriptions and add bold
 	let headings = new Set([
 	 	...document.querySelectorAll('h1'),
 	 	...document.querySelectorAll('h2'),
@@ -77,8 +75,9 @@ function transform(){
 	])
 
 	headings.forEach(heading => {
-		console.log(heading)
 		heading.innerHTML = heading.innerHTML.replace(/<[^>]*>?/gm, '')
+		heading.innerHTML = heading.innerHTML.replace('&lt;H3&gt; ', '')
+		heading.innerHTML = heading.innerHTML.replace('&lt;H2&gt; ', '')
 	})
 
 	//Add links to table of contents
