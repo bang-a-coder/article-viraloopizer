@@ -34,7 +34,7 @@ function transform(){
 	//Remove descriptive headings
 
 
-	//make make images large
+	//make make images large & aligncenter
 	let images = workbench.querySelectorAll('img')
 
 	images.forEach(img =>{
@@ -51,12 +51,24 @@ function transform(){
 		}
 	})
 
-	
-	//center align images
-
 
 	//center align "image-souce"
+	let spans = workbench.querySelectorAll('span')
 
+	spans.forEach(span=>{
+		if (span.innerHTML.includes("Image Source:")) {
+			let linkAfter = span.nextSibling
+
+			let p = document.createElement('p')
+			let em = document.createElement('em')
+			span.parentNode.insertBefore(em, span)
+			em.appendChild(span)
+			em.appendChild(linkAfter)
+			p.setAttribute('style', "text-align: center;")
+			em.parentNode.insertBefore(p, em)
+			p.appendChild(em)
+		}
+	})
 
 	//italics "image souce"
 
