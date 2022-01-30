@@ -52,13 +52,12 @@ function transform(){
 	})
 
 
-	//center align "image-souce"
+	//center align "image-souce" & italics
 	let spans = workbench.querySelectorAll('span')
 
-	spans.forEach(span=>{
+	spans.forEach(span=>{					//DOM manipulation with vanilla JS hurts the soul
 		if (span.innerHTML.includes("Image Source:")) {
 			let linkAfter = span.nextSibling
-
 			let p = document.createElement('p')
 			let em = document.createElement('em')
 			span.parentNode.insertBefore(em, span)
@@ -70,11 +69,17 @@ function transform(){
 		}
 	})
 
-	//italics "image souce"
-
-
 	//remove bold from headings
+	let headings = new Set([
+	 	...document.querySelectorAll('h1'),
+	 	...document.querySelectorAll('h2'),
+	 	...document.querySelectorAll('h3')	
+	])
 
+	headings.forEach(heading => {
+		console.log(heading)
+		heading.innerHTML = heading.innerHTML.replace(/<[^>]*>?/gm, '')
+	})
 
 	//Add links to table of contents
 
