@@ -14,6 +14,8 @@ function pasteOutput(html) {
 
 	codeScr.classList.add('collapse')
 	codeOut.classList.add('expand')
+
+	return html
 }
 
 
